@@ -11,7 +11,7 @@ const summaryElement = document.getElementById("summary");
 const datesElement = document.getElementById("dates");
 const actionsElement = document.getElementById("actions");
 
-const API_URL = "http://localhost:8086/api/notices/analyze";
+const API_URL = "https://campus-access-0k1q.onrender.com/api/notices/analyze";
 
 noticeInput.addEventListener("input", () => {
     charCount.textContent =
