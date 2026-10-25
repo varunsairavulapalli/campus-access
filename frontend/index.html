@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusAI | Smart Notice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">C</span>
+            CampusAI
+        </a>
+        <span class="nav-label">Smart Notice Assistant</span>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <span class="tag">SMARTER CAMPUS. SIMPLER NOTICES.</span>
+            <h1>College notices,<br><span>made simple.</span></h1>
+            <p class="hero-text">
+                Turn lengthy college announcements into clear summaries,
+                important deadlines and action items.
+            </p>
+            <div class="hero-features">
+                <span>✓ Easy summaries</span>
+                <span>✓ Deadline detection</span>
+                <span>✓ Read aloud</span>
+            </div>
+        </section>
+
+        <section class="workspace">
+            <div class="section-heading">
+                <div>
+                    <h2>Notice Assistant</h2>
+                    <p>Paste your college notice below to get started.</p>
+                </div>
+                <span class="status"><span class="status-dot"></span> Ready</span>
+            </div>
+
+            <label for="noticeInput">YOUR COLLEGE NOTICE</label>
+            <textarea
+                id="noticeInput"
+                placeholder="Paste your college notice here...&#10;&#10;Example: All students must register for the technical symposium before 30 November 2026."
+                maxlength="20000"
+            ></textarea>
+
+            <div class="input-footer">
+                <span id="charCount">0 / 20000 characters</span>
+                <button id="clearBtn" class="clear-btn" type="button">Clear text</button>
+            </div>
+
+            <button id="analyzeBtn" class="primary-btn" type="button">
+                <span>✦</span> Analyze Notice
+            </button>
+
+            <p id="message" class="message" role="status" aria-live="polite"></p>
+
+            <div id="results" class="results" hidden>
+                <div class="results-heading">
+                    <div>
+                        <span class="tag">YOUR RESULTS</span>
+                        <h2>Notice at a glance</h2>
+                    </div>
+                    <button id="readBtn" class="secondary-btn" type="button">
+                        🔊 Read aloud
+                    </button>
+                </div>
+
+                <article class="result-card">
+                    <h3><span class="result-icon">✦</span> Notice Summary</h3>
+                    <p id="summary"></p>
+                </article>
+
+                <div class="result-grid">
+                    <article class="result-card">
+                        <h3>📅 Important Dates</h3>
+                        <ul id="dates"></ul>
+                    </article>
+
+                    <article class="result-card">
+                        <h3>✓ Action Items</h3>
+                        <ul id="actions"></ul>
+                    </article>
+                </div>
+
+                <p class="disclaimer">
+                    Please verify important dates and instructions against
+                    the original college notice.
+                </p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <span class="feature-icon">✦</span>
+                <h3>Simple summaries</h3>
+                <p>Make lengthy announcements easier to understand.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">📅</span>
+                <h3>Deadline highlights</h3>
+                <p>Spot dates and identify actions that need attention.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔊</span>
+                <h3>Accessible reading</h3>
+                <p>Listen to the notice using your browser's speech feature.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CampusAI — Making campus information accessible to everyone.</p>
+        <p class="footer-small">AI Campus Access Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
